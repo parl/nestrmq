@@ -4,6 +4,7 @@ import { LoginData } from '../types/login.type';
 export class LoginDTO implements LoginData {
   @IsNotEmpty()
   @IsEmail()
+  @IsString()
   email: string;
 
   @IsNotEmpty()
