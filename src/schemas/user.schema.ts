@@ -1,6 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
-
 export type UserDocument = HydratedDocument<User>;
 
 @Schema()
@@ -36,4 +35,6 @@ export class User {
   weight: string;
 }
 
-export const userSchema = SchemaFactory.createForClass(User);
+const UserSchema = SchemaFactory.createForClass(User);
+
+export { UserSchema };

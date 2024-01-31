@@ -11,7 +11,7 @@ import { AuthModule } from './auth/auth.module';
     MongooseModule.forRootAsync({
       inject: [ConfigService],
       useFactory: async (configService: ConfigService) => ({
-        uri: configService.get('MONGO_URI'),
+        uri: 'mongodb://root:supersecret@localhost:9080/nestrmq?authSource=admin',
       }),
     }),
     AuthModule,
