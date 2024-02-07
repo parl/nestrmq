@@ -9,7 +9,5 @@ export class LoginDTO implements LoginData {
 
   @IsNotEmpty()
   @IsString()
-  @Min(8)
-  @Max(32)
   password: string;
 }
